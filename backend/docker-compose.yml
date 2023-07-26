@@ -1,0 +1,40 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    command: bash -c "chmod 644 /etc/mysql/conf.d/my.cnf && docker-entrypoint.sh --default-authentication-plugin=mysql_native_password"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      JDBC_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./initdb/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - application-network
+  app:
+    build: .
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      AZURE_CLIENT_ID: ${AZURE_CLIENT_ID}
+      AZURE_TENANT_ID: ${AZURE_TENANT_ID}
+      AZURE_CLIENT_SECRET: ${AZURE_CLIENT_SECRET}
+      SPRING_MAIL_HOST: ${SPRING_MAIL_HOST}
+      SPRING_MAIL_PORT: ${SPRING_MAIL_PORT}
+      SPRING_MAIL_USERNAME: ${SPRING_MAIL_USERNAME}
+      SPRING_MAIL_PASSWORD: ${SPRING_MAIL_PASSWORD}
+    ports:
+      - "8080:8080"
+    networks:
+      - application-network
+    depends_on:
+      - db
+
+networks:
+  application-network:
+    driver: bridge

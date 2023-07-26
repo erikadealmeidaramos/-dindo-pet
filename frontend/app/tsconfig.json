@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@mdi/js": ["./node_modules/@mdi/js"],
+      "@mdi/react": ["./node_modules/@mdi/react"]
+    }
+  }
+}
