@@ -25,9 +25,9 @@
 
 ## ⚠ Requirements:
 
-> ⚠ Docker desktop instalado e aberto
-> ⚠ Android studio instalado e um virtual device criado
-> ⚠ Node.js LTS instalado
+> ⚠ Docker desktop instalado e aberto <br>
+> ⚠ Android studio instalado e um virtual device criado <br>
+> ⚠ Node.js LTS instalado <br>
 
 ## Technologies:
 
