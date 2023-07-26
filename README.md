@@ -7,11 +7,11 @@
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/erikadealmeidaramos/dindo-pet?color=blueviolet&style=for-the-badge">
 </p>
 
-## Layout:
+## 🎨 Layout:
 
 ![smartbooking](/dindoPet.mp4?raw=true)
 
-## Running the project:
+## 💫 Running the project:
 
 ```bash
 - Backend:
@@ -29,6 +29,6 @@
 > ⚠ Android studio instalado e um virtual device criado <br>
 > ⚠ Node.js LTS instalado <br>
 
-## Technologies:
+## 🔧 Technologies:
 
 [![My Skills](https://skillicons.dev/icons?i=java,spring,docker,react,ts,redux,mysql,azure)](https://skillicons.dev)
