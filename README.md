@@ -9,7 +9,7 @@
 
 ## 🎨 Layout:
 
-![smartbooking](/dindoPet.mp4?raw=true)
+![smartbooking](/dindoPet.mp4)
 
 ## 💫 Running the project:
 
@@ -27,7 +27,7 @@
 
 > ⚠ Docker <br>
 > ⚠ Android studio <br>
-> ⚠ Node.js LTS  <br>
+> ⚠ Node.js LTS <br>
 
 ## 🔧 Technologies:
 
