@@ -9,7 +9,7 @@
 
 ## 🎨 Layout:
 
-![smartbooking](/dindoPet.mp4)
+![smartbooking](/dindoPet.gif)
 
 ## 💫 Running the project:
 
